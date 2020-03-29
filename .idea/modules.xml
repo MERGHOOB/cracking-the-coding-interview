@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/chap10_SortingAndSearching/chap10_SortingAndSearching.iml" filepath="$PROJECT_DIR$/chap10_SortingAndSearching/chap10_SortingAndSearching.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap2_LinkedLists/chap2_LinkedLists.iml" filepath="$PROJECT_DIR$/chap2_LinkedLists/chap2_LinkedLists.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cracking-the-coding-interview.iml" filepath="$PROJECT_DIR$/.idea/cracking-the-coding-interview.iml" />
     </modules>
   </component>
