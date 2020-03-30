@@ -12,6 +12,15 @@ public class Node {
         this.val = val;
     }
 
+    public static int lengthOfList(Node head) {
+        int len = 0;
+        while(head != null) {
+            head = head.next;
+            len++;
+        }
+        return len;
+    }
+
     void appendToTail(int d) {
         Node end = new Node(d);
         Node n = this;
