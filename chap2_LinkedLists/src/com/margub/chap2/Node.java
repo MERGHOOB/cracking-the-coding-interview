@@ -21,6 +21,15 @@ public class Node {
         return len;
     }
 
+    public static Node padZerosAtHead(Node head, int numofZerosRequired) {
+        while(numofZerosRequired-- != 0) {
+            Node zero = new Node(0);
+            zero.next = head;
+            head = zero;
+        }
+        return head;
+    }
+
     void appendToTail(int d) {
         Node end = new Node(d);
         Node n = this;
