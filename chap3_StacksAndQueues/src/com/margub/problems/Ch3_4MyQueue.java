@@ -25,6 +25,18 @@ public class Ch3_4MyQueue<T> {
         return second.pop();
     }
 
+    public T peek() {
+        if (second.isEmpty()) {
+            while (!first.isEmpty()) {
+                second.add(first.pop());
+            }
+        }
+        if (second.isEmpty()) {
+            throw new RuntimeException("Queue is Empty");
+        }
+        return second.peek();
+    }
+
     public static void main(String[] args) {
         Ch3_4MyQueue<Integer> integerCh3_4MyQueue = new Ch3_4MyQueue<>();
 
