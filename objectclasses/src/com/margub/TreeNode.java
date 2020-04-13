@@ -11,5 +11,4 @@ public class TreeNode<T> {
         right = null;
     }
 
-
 }

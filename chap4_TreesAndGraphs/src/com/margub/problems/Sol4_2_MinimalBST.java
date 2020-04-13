@@ -1,6 +1,7 @@
 package com.margub.problems;
 
 import com.margub.TreeNode;
+import com.margub.TreeUtils;
 
 public class Sol4_2_MinimalBST {
 
@@ -32,7 +33,7 @@ public class Sol4_2_MinimalBST {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1};
+        int[] arr = {1,2,3,4,5,6,7,8};
 
         TreeNode minimalBST = new Sol4_2_MinimalBST().createMinimalBST(arr);
         TreeNode temp = minimalBST;
@@ -46,6 +47,8 @@ public class Sol4_2_MinimalBST {
             temp = temp.right;
             height--;
         }
-        System.out.println(height);
+//        System.out.println(height);
+
+        TreeUtils.InorderTraversal(minimalBST);
     }
 }
