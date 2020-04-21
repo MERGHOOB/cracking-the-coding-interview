@@ -3,7 +3,7 @@ package com.margub.problems;
 import com.margub.TreeNode;
 import com.margub.TreeUtils;
 
-public class Sol_4_4BalanceTreeChecker {
+public class Sol4_4BalanceTreeChecker {
 
     private boolean isBalanced(TreeNode root) {
 
