@@ -16,6 +16,8 @@ public class Sol4_5ValidateBST {
             return ((Integer) root.left.val) <= root.val;
         }
 
+        //root.right != null equal will be true but as to make it readable
+        //noinspection ConstantConditions
         if (root.left == null && root.right != null) {
             return ((Integer) root.right.val) > root.val;
         }
@@ -38,12 +40,12 @@ public class Sol4_5ValidateBST {
         return true;
     }
 
-    private void readInorder(TreeNode<Integer> root, List<Integer> values) {
+    private void readInorder(TreeNode root, List<Integer> values) {
         if (root == null) {
             return;
         }
         readInorder(root.left, values);
-        values.add(root.val);
+        values.add((Integer) root.val);
         readInorder(root.right, values);
     }
 }
