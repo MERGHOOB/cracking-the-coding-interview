@@ -58,4 +58,34 @@ public class Sol4_8FirstCommonAncestor {
 
     }
 
+    /* Optimized(better soltuion)
+    Root required if no parent link is present
+     */
+    public TreeNode fcaOptimized(TreeNode root, TreeNode first, TreeNode second) {
+
+        if (root == null) {
+            return root; // Base case
+        }
+        if (root == first || root == second) {
+            return root; // Base case
+        }
+
+        TreeNode left = fcaOptimized(root.left, first, second);
+        if (left != null && left != first && left != second) { // this shows that left is common ancestor
+            return left; //dont got for right subtree
+        }
+        TreeNode right = fcaOptimized(root.right, first, second);
+        if (right != null && right != first && right != second) {//// this shows that left is common ancestor
+            return right; // don't go further
+        }
+        //Both side if we get NOT NULL, it means this root must be a Ancestor
+        if (left != null && right != null) {
+            return root;
+        }
+        // else who is non-null return that or both null then return null;
+        return left != null ? left : right;
+
+
+    }
+
 }
