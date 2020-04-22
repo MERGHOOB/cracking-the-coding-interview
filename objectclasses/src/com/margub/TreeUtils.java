@@ -19,4 +19,22 @@ public class TreeUtils {
 
         return Math.max(getHeight(root.left), getHeight(root.right)) + 1;
     }
+
+    /*
+    This method consider parent is present
+     */
+    public static int getDepthForNodeIfParent(TreeNode first) {
+
+        int height = 0;
+        while (first != null) {
+            first = first.parent;
+            height++;
+        }
+
+        return height;
+    }
+
+    public static void swap(TreeNode first, TreeNode second) {
+        TreeNode temp = first;first = second; second = temp;
+    }
 }
